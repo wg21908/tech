@@ -15,6 +15,18 @@ This repository documents my early Linux kernel contribution journey, including 
 - Iterating on reviews with versioned patch submissions (`v2`, threading with `--in-reply-to`).
 - Lessons learned while working with Linux kernel maintainers and tooling.
 
+## Linux Kernel Newbies Profile
+
+You can also find me on Linux Kernel Newbies here:
+[https://kernelnewbies.org/WesGibbs](https://kernelnewbies.org/WesGibbs)
+
 ## Why This Exists
 
 This repo is intended as a practical reference for other first-time contributors who want a concrete example of the Linux kernel contribution process from ticket selection through review feedback and resubmission.
+
+## Questions / Support
+
+If you have questions or want support as you work through your own first contributions, I am happy to help.
+
+Also, I love coffee. If this helped and you want to buy me a cup, you can do that here:
+[https://buymeacoffee.com/wg21908](https://buymeacoffee.com/wg21908)
