@@ -21,8 +21,12 @@
 
 1. Duplicating my current configuration with `cp /boot/config-$(uname -r) .config`
 2. In $HOME/git/kernels/staging/.config file, I updated line to be CONFIG_LOCALVERSION="-wgibbs-test-NN" where "wgibbs-test" should be a better very short description of ticket being worked and NN should be the numeric of the number of attempts it takes me to fix the issue. 
-3. Changes to avoid error when copying config from source Rocky Linux distro with `scripts/config --file .config --set-str SYSTEM_TRUSTED_KEYS ""` and `scripts/config --file .config --set-str SYSTEM_REVOCATION_KEYS ""`
-4. Silently update any new configuration values to their default with `make olddefconfig`
+3. Changes to avoid error when copying config from source Rocky Linux distro with the following:
+
+            scripts/config --file .config --set-str SYSTEM_TRUSTED_KEYS ""
+            scripts/config --file .config --set-str SYSTEM_REVOCATION_KEYS ""
+
+5. Silently update any new configuration values to their default with `make olddefconfig`
 
 
 ## Making Temporary Change
