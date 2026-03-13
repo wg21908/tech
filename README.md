@@ -4,8 +4,6 @@ This repository documents my early Linux kernel contribution journey, including 
 
 ## Repository Contents
 
-https://github.com/wg21908/kernel-newbie/blob/main/learning_journey_02/README.md
-
 - [`1ST_LINUX_KERNEL_TICKET.md`](learning_journey_01/1ST_LINUX_KERNEL_TICKET.md): End-to-end notes on selecting a beginner-friendly kernel-related issue, preparing a fix, submitting patches, and addressing maintainer feedback.
 - [`LINUX_KERNEL_PATCH_SUBMISSIONS.md`](learning_journey_01/LINUX_KERNEL_PATCH_SUBMISSIONS.md): Visual log of Linux kernel patch submission confirmations.
 - [`images/`](./img): Supporting screenshots referenced in markdown documentation.
