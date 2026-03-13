@@ -12,7 +12,7 @@ https://github.com/wg21908/kernel-newbie/blob/main/learning_journey_02/README.md
 - [`PREPARE_DEVELOPMENT_ENVIRONMENT.md`](learning_journey_02/README.md): Preparing development environment for Linux kernel development
 - [`LINUX_SOURCE_DIR_TREE.md`](learning_journey_01/LINUX_SOURCE_DIR_TREE.md): Overview of the top-level directories for Linux kernel source code
 - [`KERNEL_DEVEL_TASKS.md`](learning_journey_01/KERNEL_DEVEL_TASKS.md): Types of Linux kernel development
-- [`EMULATE_LINUX_V001.md`](learning_journey_NN/README.md): The nerdiest of projects.
+- [`EMULATE_LINUX_V001.md`](learning_journey_NN/README.md): Using a Emulator, I want to mimic the machine that Linus Torvolds used to develop the 1st version of the Linux Kernel
 
 ## What This Repo Covers
 
