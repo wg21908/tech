@@ -1,0 +1,11 @@
+set sendmail="/usr/sbin/sendmail -oem -oi"
+set use_from=yes
+set realname="<Your Fullname>"
+set from="<Gmail username>@gmail.com"
+
+set spoolfile="~/Mail/inbox"
+set folder="~/Mail"
+set record="+sent"
+set mbox_type=mbox    
+
+set beep_new

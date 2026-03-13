@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [    
+    {
+      "name": "Attach to QEMU kernel (GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "$HOME/git/linux/vmlinux",
+      "miDebuggerServerAddress": "localhost:1234",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "cwd": "${workspaceFolder}",
+      "externalConsole": false,   // whether to use external terminal, outside of VSC
+      "MIMode": "gdb" 
+    }
+  ]
+}

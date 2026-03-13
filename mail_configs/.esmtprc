@@ -1,0 +1,4 @@
+hostname = smtp.gmail.com:587
+username = <Gmail username>@gmail.com
+password = <Google app password without spaces> 
+starttls = required

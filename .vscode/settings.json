@@ -1,0 +1,47 @@
+{
+  // Use compile_commands.json for IntelliSense
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+
+  // Use clangd instead of IntelliSense (faster and more accurate for kernel)
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.arguments": [
+    "--background-index",
+    "--header-insertion=never",
+    "--log=error",
+    "--compile-commands-dir=${workspaceFolder}"
+  ],
+
+  // Limit file watching (kernel is huge!)
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/Documentation/**": true,
+    "**/usr/**": true
+  },
+
+  // Exclude unnecessary architectures to reduce parsing load
+  "files.exclude": {
+    "**/arch/*": true,
+    "!**/arch/x86/**": true
+  },
+
+  // Make search and symbol operations faster
+  "search.exclude": {
+    "**/arch/*": true,
+    "!**/arch/x86/**": true,
+    "**/Documentation/**": true
+  },
+
+  // Formatting (optional; kernel uses tabs)
+  "editor.tabSize": 8,
+  "editor.insertSpaces": false,
+
+  // Optional: show inlay hints
+  "editor.inlayHints.enabled": "off",
+
+  // Optional: use the system terminal
+  "terminal.integrated.defaultProfile.linux": "bash",
+
+  // Optional: themeing and UI
+  "workbench.colorTheme": "Default Dark Modern"
+}
