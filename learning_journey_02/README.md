@@ -7,7 +7,7 @@ order below: first the environment setup, then the practice run. A third file
 
 Files
 -
-- [DEVELOPMENT_ENVIRONMENT_SETUP.md](learning_journey_02/DEVELOPMENT_ENVIRONMENT_SETUP.md):
+- [DEVELOPMENT_ENVIRONMENT_SETUP.md](DEVELOPMENT_ENVIRONMENT_SETUP.md):
   - Purpose: step-by-step host setup for building and contributing to the
     Linux kernel (Rocky Linux 9 in the author's case).
   - Key contents: resources/links used, assumptions, package installation
@@ -20,7 +20,7 @@ Files
     Google App Password), testing send-email, and a typical workflow for
     preparing and emailing patches.
 
-- [PRACTICE_RUN.md](learning_journey_02/PRACTICE_RUN.md):
+- [PRACTICE_RUN.md](PRACTICE_RUN.md):
   - Purpose: a concise checklist for a practice change and verification loop.
   - Key contents: git basics (branching, fetching, rebasing), how to
     configure the kernel for a ticket (copying /boot config, setting
@@ -36,9 +36,9 @@ Files
 
 How to use these notes
 -
-- Step 1: Follow the steps in [DEVELOPMENT_ENVIRONMENT_SETUP.md](learning_journey_02/DEVELOPMENT_ENVIRONMENT_SETUP.md)
+- Step 1: Follow the steps in [DEVELOPMENT_ENVIRONMENT_SETUP.md](DEVELOPMENT_ENVIRONMENT_SETUP.md)
   to prepare your environment and verify email/git tooling.
-- Step 2: Use [PRACTICE_RUN.md](learning_journey_02/PRACTICE_RUN.md) to make a
+- Step 2: Use [PRACTICE_RUN.md](PRACTICE_RUN.md) to make a
   small, reversible change and exercise the build/send/test loop.
 - Step 3: When `THE_REAL_DEAL.md` is added, use it as the reference for the
   official ticket workflow and to track the work you submit upstream.
