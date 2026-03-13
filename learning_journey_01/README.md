@@ -1,4 +1,4 @@
-# learning_journey_01 — Linux kernel orientation & first contribution notes
+# Learning Journey 01 — Linux kernel orientation & first contribution notes
 
 This directory contains introductory notes for getting oriented in Linux kernel
 development and documenting a first upstream contribution. The files below move
