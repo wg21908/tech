@@ -42,3 +42,41 @@ Redo step 1 to ensure all software is now present
 ### Building the kernel
 
     make -j$(nproc)
+
+### Installing the kernel
+
+    sudo make modules_install install
+
+### Verify the new kernel got a boot entry
+
+    sudo grubby --default-kernel
+    sudo grubby --info=ALL | less
+
+### GRUB menu to always be visible on Rocky 9
+
+    sudo grub2-editenv - unset menu_auto_hide
+
+### Longer GRUB Timeout
+
+    GRUB_TIMEOUT=60
+    GRUB_TIMEOUT_STYLE=menu
+    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+### Optional : If the new kernel does not become the default automatically, you can set it explicitly with:
+
+    sudo grubby --set-default /boot/vmlinuz-<your-new-kernel-version>
+
+### Running the kernel
+
+You will (usually) need to reboot into your new kernel. 
+
+
+
+
+
+
+
+
+
+
+    
