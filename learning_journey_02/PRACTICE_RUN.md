@@ -61,10 +61,8 @@
 ## Test the Changes
 
 - `dmesg | less`
+- Search for your printk in the log file by typing "/I can modify"
 
 ## Revert Changes
 
 This is just a practice run, nothing official, so we will get rid up updates with `git reset --hard HEAD`
-
-
- 
