@@ -1,5 +1,5 @@
 # Using esmtp for sending email
-set sendmail="/usr/bin/esmtp -t"
+set sendmail="/usr/bin/msmtp"
 
 # Identity
 set use_from=yes
