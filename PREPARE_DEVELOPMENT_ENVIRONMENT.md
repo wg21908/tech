@@ -1,10 +1,19 @@
 # Linux Kernel Development Environment Setup
 
+## Resources 
+
+This document is based on following resources.  I converted steps to be applicable to Rocky Linux 9.  
+
+1. https://kernelnewbies.org/OutreachyfirstpatchSetup
+2. https://kernelnewbies.org/FirstKernelPatch
+
 ## Assumption(s)
 
 - Host is Rocky Linux version 9
 
-## Setup
+## Setup 1
+
+The content that follows comes from the first resource defined in Resources section.
 
 ### Verify important packages
 
@@ -25,6 +34,10 @@ Redo step 1 to ensure all software is now present
     cd $HOME/git && mkdir -p kernels; cd kernels
     git clone -b staging-testing git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
     cd staging
+
+### Make ctags
+
+    make tags
 
 ### Duplicating your current config
 
@@ -73,3 +86,7 @@ Redo step 1 to ensure all software is now present
 ### Running the kernel
 
 You will (usually) need to reboot into your new kernel. 
+
+## Setup 2
+
+The content that follows comes from the second resource defined in Resources section.
