@@ -1,11 +1,51 @@
-set sendmail="/usr/sbin/sendmail -oem -oi"
-set use_from=yes
-set realname="<Your Fullname>"
-set from="<Gmail username>@gmail.com"
+#
+# V2
+#
 
+# Using esmtp for sending email
+set sendmail="/usr/sbin/esmtp -t"
+
+# Identity
+set use_from=yes
+set realname="<Your fullname>"
+set from="<Gmail username>@gmail.com"
+set envelope_from=yes
+
+# Mail directories
 set spoolfile="~/Mail/inbox"
 set folder="~/Mail"
 set record="+sent"
-set mbox_type=mbox    
 
+# Mailbox format
+set mbox_type=Maildir
+
+# Set default editor
+set editor="vim"
+
+# Encoding (important for patches)
+set charset="utf-8"
+set send_charset="utf-8"
+
+# Don't mess with patch formatting
+set text_flowed=no
+set wrap=0
+
+# Notifications
 set beep_new
+
+#
+# V1
+#
+
+# set sendmail="/usr/sbin/sendmail -oem -oi"
+# set use_from=yes
+# set realname="<Your Fullname>"
+# set from="<Gmail username>@gmail.com"
+#
+# set spoolfile="~/Mail/inbox"
+# set folder="~/Mail"
+# set record="+sent"
+# set mbox_type=mbox    
+#
+# set beep_new
+#
