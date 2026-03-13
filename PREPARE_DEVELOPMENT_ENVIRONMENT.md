@@ -79,10 +79,6 @@ Redo step 1 to ensure all software is now present
     GRUB_TIMEOUT_STYLE=menu
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
-### Optional : If the new kernel does not become the default automatically, you can set it explicitly with:
-
-    sudo grubby --set-default /boot/vmlinuz-<your-new-kernel-version>
-
 ### Running the kernel
 
 You will (usually) need to reboot into your new kernel. 
