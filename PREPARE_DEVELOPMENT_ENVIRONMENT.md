@@ -105,7 +105,27 @@ The content that follows comes from the second resource defined in Resources sec
 
 ### Setup email
 
-git send-email
-mutt
-esmtp
-gmail
+1. git send-email, mutt, and esmtp were installed earlier
+2. In your Google account: Turn on 2-Step Verification, Create an app password, and Save that 16-character app password for the configs below
+3. Copy https://github.com/wg21908/kernel-newbie/blob/main/mail_configs/.esmtprc to $HOME/, then make appropriate modifications
+4. chmod 600 ~/.esmtprc
+5. Copy https://github.com/wg21908/kernel-newbie/blob/main/mail_configs/.muttrc to $HOME/, then make appropriate modifications
+6. chmod 600 ~/.muttrc
+7. Configure git send-email
+
+    git config --global sendemail.smtpServer smtp.gmail.com
+    git config --global sendemail.smtpServerPort 587
+    git config --global sendemail.smtpEncryption tls
+    git config --global sendemail.smtpUser yourname@gmail.com
+    git config --global sendemail.smtpPass YOUR_16_CHAR_APP_PASSWORD
+    git config --global sendemail.from "Your Name <yourname@gmail.com>"
+    git config --global user.name "Your Name"
+    git config --global user.email "yourname@gmail.com"
+
+
+8. Test mutt can read mail: `mutt`
+9. Test mutt can send mail: `mutt -s "mutt test" yourname@gmail.com`
+10. Test git send-email without actually sending: `git send-email --dry-run --to yourname@gmail.com 0001-some-patch.patch`
+11. Then test a real send to yourself: `git send-email --to yourname@gmail.com 0001-some-patch.patch`
+12. Final kernel-safe test: Receive the patch mail, Save it as a file, then Verify it still applies cleanly with git am or patch
+
