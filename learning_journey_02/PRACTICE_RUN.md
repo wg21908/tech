@@ -30,17 +30,17 @@
 1. `vim drivers/bluetooth/btusb.c `
 2. Find the probe function
 
-   static int btusb_probe(struct usb_interface *intf,
-                       const struct usb_device_id *id)
-  {
-          struct usb_endpoint_descriptor *ep_desc;
-          struct gpio_desc *reset_gpio;
-          struct btusb_data *data;
-          struct hci_dev *hdev;
-          unsigned ifnum_base;
-          int i, err, priv_size;
-  
-          printk(KERN_DEBUG "I can modify the Linux Kernel\n");
+         static int btusb_probe(struct usb_interface *intf,
+                             const struct usb_device_id *id)
+           {
+                   struct usb_endpoint_descriptor *ep_desc;
+                   struct gpio_desc *reset_gpio;
+                   struct btusb_data *data;
+                   struct hci_dev *hdev;
+                   unsigned ifnum_base;
+                   int i, err, priv_size;
+           
+                   printk(KERN_DEBUG "I can modify the Linux Kernel\n");
 
 3. Save the file
 
