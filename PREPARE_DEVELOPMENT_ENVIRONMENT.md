@@ -113,15 +113,14 @@ The content that follows comes from the second resource defined in Resources sec
 6. chmod 600 ~/.muttrc
 7. Configure git send-email
 
-    git config --global sendemail.smtpServer smtp.gmail.com
-    git config --global sendemail.smtpServerPort 587
-    git config --global sendemail.smtpEncryption tls
-    git config --global sendemail.smtpUser yourname@gmail.com
-    git config --global sendemail.smtpPass YOUR_16_CHAR_APP_PASSWORD
-    git config --global sendemail.from "Your Name <yourname@gmail.com>"
-    git config --global user.name "Your Name"
-    git config --global user.email "yourname@gmail.com"
-
+    git config --global sendemail.smtpServer smtp.gmail.com  
+    git config --global sendemail.smtpServerPort 587  
+    git config --global sendemail.smtpEncryption tls  
+    git config --global sendemail.smtpUser yourname@gmail.com  
+    git config --global sendemail.smtpPass YOUR_16_CHAR_APP_PASSWORD  
+    git config --global sendemail.from "Your Name <yourname@gmail.com>"  
+    git config --global user.name "Your Name"  
+    git config --global user.email "yourname@gmail.com"  
 
 8. Test mutt can read mail: `mutt`
 9. Test mutt can send mail: `mutt -s "mutt test" yourname@gmail.com`
