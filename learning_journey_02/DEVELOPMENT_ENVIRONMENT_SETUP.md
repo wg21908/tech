@@ -107,9 +107,9 @@ The content that follows comes from the second resource defined in Resources sec
 
 1. FYI: git send-email, mutt, and esmtp were installed earlier
 2. In your Google account: Turn on 2-Step Verification, Create an app password, and Save that 16-character app password for the configs below.  FYI: While signed in to wg21908@gmail.com Gmail account, go to other browser tab and search "Google App Passwords" to get to page to manage this part.  Appears to be at https://myaccount.google.com/apppasswords, I was able to name my new App Password a name that reflected machine that was making use of it.
-3. Copy https://github.com/wg21908/kernel-newbie/blob/main/mail_configs/.msmtprc to $HOME/, then make appropriate modifications
+3. Copy https://github.com/wg21908/kernel-newbie/blob/main/configs/.msmtprc to $HOME/, then make appropriate modifications
 4. chmod 600 ~/.msmtprc
-5. Copy https://github.com/wg21908/kernel-newbie/blob/main/mail_configs/.muttrc to $HOME/, then make appropriate modifications
+5. Copy https://github.com/wg21908/kernel-newbie/blob/main/configs/.muttrc to $HOME/, then make appropriate modifications
 6. chmod 600 ~/.muttrc
 7. mkdir -p ~/Mail/inbox/{cur,new,tmp}
 8. mkdir -p ~/Mail/sent/{cur,new,tmp}
