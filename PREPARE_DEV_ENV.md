@@ -12,7 +12,7 @@
 - QEMU is the tool where you can run the a Linux VM that has the kernel updates.  The QEMU install script is part of BLFS chapter 8  
 - QEMU and GDB kernel settings that need to be in place for LFS host kernel are shown below.
 - Visual Studio Code (VSC) plugins shown in screenshot later on page and important configuration files [here](./.vscode)
-- Vim as default editor, w/default [configuration](.vimconfig)  
+- Vim as default editor, w/default [configuration](configs/.vimconfig)  
 - busybox install script is part of BLFS, w/in the blfs/other directory
 - mutt, procmail, and fetchmail are part of BLFS chapter 19.  mutt is the front-end mail interface.  procmail and fetchmail contribute to receiving email on my machine.  mutt config [here](./mail_configs/.muttrc), procmail config [here](./mail_configs/.procmailrc), and fetchmail config [here](./mail_configs/.fetchmailrc).
 - sendmail was part of BLFS chapter 21, it is involved in sending email and is backend to mutt UI.  config [here](./mail_configs/sendmail.mc).

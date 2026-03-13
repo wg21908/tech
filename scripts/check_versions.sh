@@ -11,9 +11,32 @@ echo
 
 try_cmd_version() {
   local name="$1"
+
+  # Special case: git-email (git send-email subcommand)
+  if [[ "$name" == "git-email" ]]; then
+    if command -v git >/dev/null 2>&1 && git send-email --help >/dev/null 2>&1; then
+      local path
+      path=$(command -v git)
+      local ver
+      ver=$(git --version 2>&1 | head -n1)
+      printf "git send-email: available via git (%s) — %s\n" "$path" "$ver"
+      return 0
+    else
+      printf "git send-email: NOT FOUND\n"
+      return 1
+    fi
+  fi
+
   if command -v "$name" >/dev/null 2>&1; then
     local path
     path=$(command -v "$name")
+
+    # Special handling for gitk (avoid launching GUI)
+    if [[ "$name" == "gitk" ]]; then
+      printf "%s: found (%s) — GUI tool, version check skipped\n" "$name" "$path"
+      return 0
+    fi
+
     local ver
     for opt in --version -V -v -version -h; do
       ver=$("$name" $opt 2>&1 | head -n1) || true
@@ -22,6 +45,7 @@ try_cmd_version() {
         return 0
       fi
     done
+
     printf "%s: found (%s) — version output not standard\n" "$name" "$path"
     return 0
   else

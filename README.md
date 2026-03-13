@@ -6,7 +6,7 @@ This repository documents my early Linux kernel contribution journey, including 
 
 - [`1ST_LINUX_KERNEL_TICKET.md`](./1ST_LINUX_KERNEL_TICKET.md): End-to-end notes on selecting a beginner-friendly kernel-related issue, preparing a fix, submitting patches, and addressing maintainer feedback.
 - [`LINUX_KERNEL_PATCH_SUBMISSIONS.md`](./LINUX_KERNEL_PATCH_SUBMISSIONS.md): Visual log of Linux kernel patch submission confirmations.
-- [`images/`](./images): Supporting screenshots and artifacts used by the submission log.
+- [`images/`](./img): Supporting screenshots and artifacts used by the submission log.
 - [`PREPARE_DEV_ENV.md`](./PREPARE_DEV_ENV.md): Preparing development environment for Linux kernel development
 - [`LINUX_SOURCE_DIR_TREE.md`](./LINUX_SOURCE_DIR_TREE.md): Overview of the top-level directories for Linux kernel source code
 - [`KERNEL_DEVEL_TASKS.md`](./KERNEL_DEVEL_TASKS.md): Types of Linux kernel development
