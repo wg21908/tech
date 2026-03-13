@@ -4,6 +4,10 @@ Using a Emulator, I want to mimic the machine that Linus Torvolds used to develo
 
 See steps below, it discusses CPU, Disk, and Filesystem required to be able to boot up a Linux instance in the Emulator using version 0.01 of the Linux Kernel.   
 
+## The Goal or End Result
+
+![img1](../img/IMG_1475.JPEG)
+
 ## Steps
 
 ![img1](../img/IMG_1463.JPEG)
