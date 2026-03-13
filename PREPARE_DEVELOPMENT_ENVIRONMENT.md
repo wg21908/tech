@@ -105,7 +105,7 @@ The content that follows comes from the second resource defined in Resources sec
 
 ### Setup email
 
-1. git send-email, mutt, and esmtp were installed earlier
+1. FYI: git send-email, mutt, and esmtp were installed earlier
 2. In your Google account: Turn on 2-Step Verification, Create an app password, and Save that 16-character app password for the configs below
 3. Copy https://github.com/wg21908/kernel-newbie/blob/main/mail_configs/.esmtprc to $HOME/, then make appropriate modifications
 4. chmod 600 ~/.esmtprc
@@ -124,7 +124,8 @@ The content that follows comes from the second resource defined in Resources sec
 
 8. Test mutt can read mail: `mutt`
 9. Test mutt can send mail: `mutt -s "mutt test" yourname@gmail.com`
-10. Test git send-email without actually sending: `git send-email --dry-run --to yourname@gmail.com 0001-some-patch.patch`
-11. Then test a real send to yourself: `git send-email --to yourname@gmail.com 0001-some-patch.patch`
-12. Final kernel-safe test: Receive the patch mail, Save it as a file, then Verify it still applies cleanly with git am or patch
+10. If mutt seems to have issues, try `mutt -d 2`, this will cause the creation of files with names beginning .muttdebug, followed by 0, 1, etc., that can help you find the problem. 
+11. Test git send-email without actually sending: `git send-email --dry-run --to yourname@gmail.com 0001-some-patch.patch`
+12. Then test a real send to yourself: `git send-email --to yourname@gmail.com 0001-some-patch.patch`
+13. Final kernel-safe test: Receive the patch mail, Save it as a file, then Verify it still applies cleanly with git am or patch
 
