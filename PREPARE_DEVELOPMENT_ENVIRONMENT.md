@@ -23,7 +23,7 @@ Run the script at https://github.com/wg21908/kernel-newbie/blob/main/scripts/che
 
 Your case may be different, install what you need!  Below is what I needed!  
 
-    sudo dnf install ctags gitk esmtp mutt git-email  
+    sudo dnf install ctags gitk msmtp mutt git-email  
 
 ### Verify important packages
 
@@ -123,11 +123,20 @@ The content that follows comes from the second resource defined in Resources sec
         git config --global sendemail.from "Your Name <yourname@gmail.com>"  
         git config --global user.name "Your Name"  
         git config --global user.email "yourname@gmail.com"  
+        git config --global format.signoff true  
 
-10. Test mutt can read mail: `mutt`
-11. Test mutt can send mail: `mutt -s "mutt test" yourname@gmail.com`
-12. If mutt seems to have issues, try `mutt -d 2`, this will cause the creation of files with names beginning .muttdebug, followed by 0, 1, etc., that can help you find the problem. 
-13. Test git send-email without actually sending: `git send-email --dry-run --to yourname@gmail.com 0001-some-patch.patch`
-14. Then test a real send to yourself: `git send-email --to yourname@gmail.com 0001-some-patch.patch`
-15. Final kernel-safe test: Receive the patch mail, Save it as a file, then Verify it still applies cleanly with git am or patch
+11. Test mutt can read mail: `mutt`
+12. Test mutt can send mail: `mutt -s "mutt test" yourname@gmail.com`
+13. If mutt seems to have issues, try `mutt -d 2`, this will cause the creation of files with names beginning .muttdebug, followed by 0, 1, etc., that can help you find the problem. 
+14. Test git send-email without actually sending: `git format-patch -1`, and `git send-email --dry-run --to wg21908@gmail.com 0001-*.patch`
+15. These commands were required as git configuration to avoid email issue for git send-email, run these: `git config --global user.name "Wes Gibbs"`, `git config --global user.email "wg21908@gmail.com"` and `git config --global --list`
+16. Verifications before sending email.  `git log --pretty=full`, do any recent commits contain email addresses like noreply.github, this is an issue that would need to be fixed.  In the case that 1 or N latest commits show bad email, then run `git rebase -i HEAD~N`, where N is the number of recent commits that have bad email, change pick to edit, then `git commit --amend --reset-author --no-edit` and `git rebase --continue`.  
+17. Then test a real send to yourself: `git send-email --to yourname@gmail.com 0001-some-patch.patch`
+18. Final kernel-safe test: Receive the patch mail, Save it as a file, then Verify it still applies cleanly with git am or patch
 
+### Typical Work Process Flow
+
+    # edit code
+    git commit -s 
+    git format-patch -1
+    git send-email --to maintainer@example.com *.patch
