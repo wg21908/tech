@@ -1,9 +1,0 @@
-# ~/.procmailrc
-MAILDIR=$HOME/Mail
-DEFAULT=$MAILDIR/inbox
-LOGFILE=$MAILDIR/procmail.log
-
-# Create the mailbox directory if it doesn't exist
-:0
-* ^TO_.*<Gmail username>@gmail.com
-$DEFAULT
