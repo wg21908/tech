@@ -87,4 +87,25 @@ You will (usually) need to reboot into your new kernel.
 
 The content that follows comes from the second resource defined in Resources section.
 
+### Setup vim
 
+    touch ~/.vimrc
+
+    # Add Content below to file and save
+    filetype plugin indent on
+    syntax on
+    set title
+    set tabstop=8
+    set softtabstop=8
+    set shiftwidth=8
+    set noexpandtab
+
+    # Setup vim as the default editor
+    sudo update-alternatives --config editor
+
+### Setup email
+
+git send-email
+mutt
+esmtp
+gmail
