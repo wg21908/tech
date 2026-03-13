@@ -52,8 +52,8 @@
 4. Set GRUB menu to always be visible on Rocky 9 with `sudo grub2-editenv - unset menu_auto_hide`
 5. Set a longer GRUB Timeout with `sudo vi /etc/default/grub` and putting following settings in place.
 
-    GRUB_TIMEOUT=60
-    GRUB_TIMEOUT_STYLE=menu
+    GRUB_TIMEOUT=60  
+    GRUB_TIMEOUT_STYLE=menu  
 
 6. Now, update grub with `sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 7. Now, you can run the kernel by reboot your machine and selecting the kernel from the grub menu, the kernel that you specified in step 2 of "Configure the Kernel" section
