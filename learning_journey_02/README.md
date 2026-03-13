@@ -43,3 +43,8 @@ How to use these notes
 - Step 3: When `THE_REAL_DEAL.md` is added, use it as the reference for the
   official ticket workflow and to track the work you submit upstream.
   
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

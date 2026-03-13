@@ -26,3 +26,9 @@
 | tools/         | Auxiliary tools and utilities: performance tracing, debugging, analysis tools that may sit outside the core kernel build.                    |
 | usr/           | Support for “/usr”‑install infrastructures, user‑mode helpers, or code to handle installations where `/usr` is separate (relatively newer).  |
 | virt/          | Virtualization support: hypervisor interfaces, KVM, paravirtualization, guest and host code.                                                 |
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

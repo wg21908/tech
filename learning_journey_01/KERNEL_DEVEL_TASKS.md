@@ -88,3 +88,9 @@
 
 👉 A typical beginner path is:
 Start with style/documentation cleanups → move on to simple bug fixes/driver updates → then specialize in a subsystem.
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

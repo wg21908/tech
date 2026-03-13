@@ -140,3 +140,9 @@ The content that follows comes from the second resource defined in Resources sec
     git commit -s 
     git format-patch -1
     git send-email --to maintainer@example.com *.patch
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

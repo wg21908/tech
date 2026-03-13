@@ -170,3 +170,9 @@ Steps Completed
 - A Bugzilla ticket usually will not get assigned directly to me. Emailing maintainers and adding a comment in the ticket were the only actions needed.
 - A Bugzilla ticket is not likely to have its status updated until it is officially merged.
 - Don't try to respond to emails from Gmail or other non-text-based email services. Use Mutt, Sendmail, Procmail, and Fetchmail for communication with maintainers.
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

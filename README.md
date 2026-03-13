@@ -30,7 +30,6 @@ This repo is intended as a practical reference for other first-time contributors
 
 ## Questions / Support
 
-If you are working through your first Linux kernel contribution and hit a snag, reach out. I am happy to answer questions and provide support.
+Technical support is available when coffee is being supplied.
 
-If this repo saved you some time and you feel like fueling more writeups, coffee is always appreciated:
-[https://buymeacoffee.com/wg21908](https://buymeacoffee.com/wg21908)
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

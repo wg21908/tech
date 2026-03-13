@@ -66,3 +66,9 @@
 ## Revert Changes
 
 This is just a practice run, nothing official, so we will get rid up updates with `git reset --hard HEAD`
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!

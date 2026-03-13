@@ -62,7 +62,11 @@ git format-patch -N origin/staging-testing
 - [ ] Run local tests
 - [ ] Send to maintainer
 
-
-
 (fill in each section as you work; I can help expand any section or
 automatically generate a patch template from your code changes if you want.)
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!
