@@ -4,14 +4,15 @@ This repository documents my early Linux kernel contribution journey, including 
 
 ## Repository Contents
 
-- [`1ST_LINUX_KERNEL_TICKET.md`](./1ST_LINUX_KERNEL_TICKET.md): End-to-end notes on selecting a beginner-friendly kernel-related issue, preparing a fix, submitting patches, and addressing maintainer feedback.
-- [`LINUX_KERNEL_PATCH_SUBMISSIONS.md`](./LINUX_KERNEL_PATCH_SUBMISSIONS.md): Visual log of Linux kernel patch submission confirmations.
+https://github.com/wg21908/kernel-newbie/blob/main/learning_journey_02/README.md
 
-- [`images/`](./img): Supporting screenshots and artifacts used by the submission log.
-- [`PREPARE_DEVELOPMENT_ENVIRONMENT.md`](./PREPARE_DEVELOPMENT_ENVIRONMENT.md): Preparing development environment for Linux kernel development
-- [`LINUX_SOURCE_DIR_TREE.md`](./LINUX_SOURCE_DIR_TREE.md): Overview of the top-level directories for Linux kernel source code
-- [`KERNEL_DEVEL_TASKS.md`](./KERNEL_DEVEL_TASKS.md): Types of Linux kernel development
-- [`EMULATE_LINUX_V001.md`](./EMULATE_LINUX_V001.md): The nerdiest of projects.
+- [`1ST_LINUX_KERNEL_TICKET.md`](learning_journey_01/1ST_LINUX_KERNEL_TICKET.md): End-to-end notes on selecting a beginner-friendly kernel-related issue, preparing a fix, submitting patches, and addressing maintainer feedback.
+- [`LINUX_KERNEL_PATCH_SUBMISSIONS.md`](learning_journey_01/LINUX_KERNEL_PATCH_SUBMISSIONS.md): Visual log of Linux kernel patch submission confirmations.
+- [`images/`](./img): Supporting screenshots referenced in markdown documentation.
+- [`PREPARE_DEVELOPMENT_ENVIRONMENT.md`](learning_journey_02/README.md): Preparing development environment for Linux kernel development
+- [`LINUX_SOURCE_DIR_TREE.md`](learning_journey_01/LINUX_SOURCE_DIR_TREE.md): Overview of the top-level directories for Linux kernel source code
+- [`KERNEL_DEVEL_TASKS.md`](learning_journey_01/KERNEL_DEVEL_TASKS.md): Types of Linux kernel development
+- [`EMULATE_LINUX_V001.md`](learning_journey_NN/README.md): The nerdiest of projects.
 
 ## What This Repo Covers
 
