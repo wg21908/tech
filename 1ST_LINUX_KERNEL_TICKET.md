@@ -3,7 +3,7 @@
 ## Goal(s)
 
 - Get familiar with the workflow and process for getting something included in a future Linux kernel release.
-- A very easy ticket
+- Complete a very easy ticket.
 
 ## Finding a Ticket to Work
 
@@ -11,19 +11,19 @@
 - Filters Applied:
   - Status: NEW, ASSIGNED, and REOPENED
   - Severity: LOW
-  - Creation Date: is greater than -3M 
+  - Creation Date: greater than `-3M`
 - At the time of my search, there were only 4 results.
-- Ticket https://bugzilla.kernel.org/show_bug.cgi?id=220489 looked to be an easier ticket since it was a man-pages documentation-related ticket.  I could see that the ticket was still assigned to the general group email and that it didn't appear that anyone started looking at it yet.
-- To play it safe though, I still emailed the maintainer email address to give them a heads up of my interest and plan to work on the ticket, email archived at https://lore.kernel.org/linux-man/aP0T3yZ0jflUtliV@secra.localdomain/T/#u. 
+- Ticket https://bugzilla.kernel.org/show_bug.cgi?id=220489 looked like an easier ticket since it was a man-pages documentation-related issue. I could see that the ticket was still assigned to the general group email, and it didn't appear that anyone had started on it yet.
+- To play it safe, I still emailed the maintainer address to give them a heads-up about my interest and plan to work on the ticket. The email archive is at https://lore.kernel.org/linux-man/aP0T3yZ0jflUtliV@secra.localdomain/T/#u.
 
 ## Applying the Fix
 
-The steps I followed to carry out the fix are listed below. 
+The steps I followed to carry out the fix are listed below.
 
     # Clone Linux kernel codebase to local machine
     git clone https://git.kernel.org/pub/scm/docs/man-pages/man-pages.git
 
-    # Navigate into cloned directory 
+    # Navigate into cloned directory
     cd man-pages
 
     # Switch to main branch
@@ -32,23 +32,23 @@ The steps I followed to carry out the fix are listed below.
     # Ensure we have the latest code
     git pull origin master
 
-    # Create feature branch where we will apply fixes too
+    # Create a feature branch where we will apply fixes
     git checkout -b fix-copy_file_range-fallback-doc
 
     # At this point I made updates to the man2/copy_file_range.2 man-page file
     vim man2/copy_file_range.2
 
-    # Verifying updates didn't make things worse
+    # Verify updates didn't make things worse
     make -R check
     
-    # Applied more fixes to man2/copy_file_range.2 man-page file due to found issue from check make cmd
+    # Apply additional fixes to man2/copy_file_range.2 based on issues found by `make -R check`
 
-## Submitting Fix
+## Submitting the Fix
 
-    # Adding updated file for file to be committed
+    # Add updated file to be committed
     git add man2/copy_file_range.2
 
-    # Adding commit message, giving details of updates made
+    # Amend commit message with details of updates made
     git commit --amend --author="Wes Gibbs <wg21908@gmail.com>" --signoff
     
     # Creating patch file locally
@@ -63,7 +63,7 @@ The steps I followed to carry out the fix are listed below.
     # Identify correct recipients
     scripts/get_maintainer.pl 0001-*.patch
     
-    # Send in patch file 
+    # Send patch file
     git send-email --to=linux-man@vger.kernel.org \
       --cc=mtk.manpages@gmail.com 0001-Subject-copy_file_range.2-glibc-no-longer-provides-f.patch
 
@@ -75,7 +75,7 @@ The steps I followed to carry out the fix are listed below.
 
 ## Applying Peer Review Feedback
 
-Peer review feedback from Alejandro Colomar "aka: Alex" can be seen at 
+Peer review feedback from Alejandro Colomar ("Alex") can be seen at
 https://lore.kernel.org/linux-man/u7yt6in3t7ng6o5nq4kqrls5ldjkr7p6nnihpi7i2upg43cbcb@qm4qani52cdz/
 
 A summary of feedback received is below.
@@ -85,18 +85,17 @@ A summary of feedback received is below.
 3. Please use semantic newlines.  See man-pages(7)  
 4. This link gives me 404 - Unknown commit object
 
-My solutions to feedback is below.  
+My responses to the feedback are below.
 
-1. For some reason the default author was not myself but got set to Sebastion, ran this:
+1. For some reason, the default author was not me and was set to Sebastian. I ran:
    `git commit --amend --author="Wes Gibbs <wg21908@gmail.com>" --signoff` 
-3. Modified man/man2/copy_file_range.2 to include "... starting with glibc 2.27, ..." verbiage that it was
-   version 2.27 of Linux kernel
-4. Modified man/man2/copy_file_range.2 to start new sentences on the next line  
-5. I found the correct Git Hash commit URL and applied it in the commenting of the man/man2/copy_file_range.2 file
+2. Modified `man2/copy_file_range.2` to include wording that this behavior starts with glibc 2.27.
+3. Modified `man2/copy_file_range.2` to use semantic newlines.
+4. I found the correct Git hash commit URL and updated the reference in `man2/copy_file_range.2`.
 
-Steps Completed  
+Steps Completed
 
-    # Navigate into cloned directory 
+    # Navigate into cloned directory
     cd man-pages
 
     # Sync your local tree with upstream
@@ -115,7 +114,7 @@ Steps Completed
     git commit --amend --signoff
 
     #
-    # Start of Good looking commit message body
+    # Start of good-looking commit message body
     #
     
     From: Your Name <your.email@example.com>
@@ -137,7 +136,7 @@ Steps Completed
      - Minor style cleanup (line wrapping and formatting).
 
     #
-    # End of Good looking commit message body
+    # End of good-looking commit message body
     #
 
     # Generate your v2 patch
@@ -154,7 +153,7 @@ Steps Completed
 
     #
     # Send the v2 patch
-    #   FYI You can find that message ID in your mail client’s headers for the original v1 email (look for 
+    #   FYI: You can find that message ID in your mail client's headers for the original v1 email (look for
     #     the Message-ID: field).
     #
     git send-email \
@@ -163,13 +162,11 @@ Steps Completed
       --in-reply-to=<message-id-of-v1@something> \
       0001-*.patch
 
-    Last submitted patch that addressed PR feedback can be see at 
+    Last submitted patch that addressed PR feedback can be seen at
       https://lore.kernel.org/linux-man/20251102000330.155591-1-wg21908@gmail.com/
 
 ## Lessons Learned
 
-- Bugzilla ticket won't get assinged to me.  Emailing maintainers and putting comment in ticket is only
-  action needed.
-- Bugzilla ticket not likely to get status updated till its officially merged.
-- Don't try to respond to email recieved by Gmail or some other non-text based email service.  Use Mutt, Sendmail, Procmail, and Fetchmail Linux email software for communication with MAINTAINERS.
-
+- A Bugzilla ticket usually will not get assigned directly to me. Emailing maintainers and adding a comment in the ticket were the only actions needed.
+- A Bugzilla ticket is not likely to have its status updated until it is officially merged.
+- Don't try to respond to emails from Gmail or other non-text-based email services. Use Mutt, Sendmail, Procmail, and Fetchmail for communication with maintainers.
