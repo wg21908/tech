@@ -10,7 +10,7 @@ This repository documents my early Linux kernel contribution journey, including 
 - [`PREPARE_DEVELOPMENT_ENVIRONMENT.md`](learning_journey_02/README.md): Preparing development environment for Linux kernel development
 - [`LINUX_SOURCE_DIR_TREE.md`](learning_journey_01/LINUX_SOURCE_DIR_TREE.md): Overview of the top-level directories for Linux kernel source code
 - [`KERNEL_DEVEL_TASKS.md`](learning_journey_01/KERNEL_DEVEL_TASKS.md): Types of Linux kernel development
-- [`EMULATE_LINUX_V001.md`](learning_journey_NN/README.md): Using a Emulator, I want to mimic the machine that Linus Torvolds used to develop the 1st version of the Linux Kernel
+- [`EMULATE_LINUX_V001.md`](learning_journey_NN/README.md): Using a Emulator, I want to mimic the machine that Linus Torvolds stood up with the 1st version of the Linux Kernel
 
 ## What This Repo Covers
 
