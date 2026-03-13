@@ -1,0 +1,83 @@
+" ----------------------------------------------------
+" General editing behavior
+" ----------------------------------------------------
+
+set nocompatible
+syntax on
+filetype plugin indent on
+
+set number
+set ruler
+set showcmd
+set showmatch
+set cursorline
+
+set hidden
+set wildmenu
+
+" ----------------------------------------------------
+" Kernel coding style
+" ----------------------------------------------------
+
+set tabstop=8
+set shiftwidth=8
+set noexpandtab
+set softtabstop=8
+
+set autoindent
+set smartindent
+
+set textwidth=80
+set colorcolumn=81
+
+" ----------------------------------------------------
+" Search improvements
+" ----------------------------------------------------
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" ----------------------------------------------------
+" Navigation improvements
+" ----------------------------------------------------
+
+set backspace=indent,eol,start
+set mouse=a
+
+" ----------------------------------------------------
+" Folding
+" ----------------------------------------------------
+
+set foldmethod=syntax
+set foldlevelstart=99
+
+" ----------------------------------------------------
+" Performance for large repos
+" ----------------------------------------------------
+
+set lazyredraw
+set ttyfast
+
+" ----------------------------------------------------
+" Tag support for kernel source
+" ----------------------------------------------------
+
+set tags=./tags,tags;/ 
+
+" ----------------------------------------------------
+" Quick commands
+" ----------------------------------------------------
+
+nnoremap <leader>c :make<CR>
+nnoremap <leader>q :copen<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>x :x<CR>
+
+" ----------------------------------------------------
+" Highlight trailing whitespace
+" ----------------------------------------------------
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
