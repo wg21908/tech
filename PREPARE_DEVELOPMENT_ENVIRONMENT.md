@@ -58,6 +58,8 @@ Redo step 1 to ensure all software is now present
 
 ### Longer GRUB Timeout
 
+    sudo vi /etc/default/grub
+
     GRUB_TIMEOUT=60
     GRUB_TIMEOUT_STYLE=menu
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
@@ -69,14 +71,3 @@ Redo step 1 to ensure all software is now present
 ### Running the kernel
 
 You will (usually) need to reboot into your new kernel. 
-
-
-
-
-
-
-
-
-
-
-    
