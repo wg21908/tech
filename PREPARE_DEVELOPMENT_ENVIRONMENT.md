@@ -12,7 +12,9 @@ Run the script at https://github.com/wg21908/kernel-newbie/blob/main/scripts/che
 
 ### Install important packages
 
-Run `sudo dnf install gitk esmtp mutt git-email` to install missing software.  Your case may be different, install what you need!
+Your case may be different, install what you need!  Below is what I needed!  
+
+    sudo dnf install ctags gitk esmtp mutt git-email  
 
 ### Verify important packages
 
