@@ -42,6 +42,4 @@ How to use these notes
   small, reversible change and exercise the build/send/test loop.
 - Step 3: When `THE_REAL_DEAL.md` is added, use it as the reference for the
   official ticket workflow and to track the work you submit upstream.
-
-If you'd like, I can create the `THE_REAL_DEAL.md` scaffold now so you can
-fill in the ticket details. 
+  
