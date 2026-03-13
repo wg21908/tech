@@ -1,4 +1,4 @@
-# learning_journey_02 — Development & Practice notes
+# Learning Journey 02 — Development & Practice notes
 
 This directory contains notes and walkthroughs for setting up a Linux kernel
 development environment and performing a practice run. Read these in the
