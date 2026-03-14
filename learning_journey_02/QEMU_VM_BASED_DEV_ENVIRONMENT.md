@@ -33,7 +33,15 @@ I'm working on Rocky Linux 9.  It appears that everything is already installed a
 
 ## Create VM Ready for Connection   
 
-    qemu-system-x86_64 -enable-kvm -machine q35 -cpu host -m 4096 -smp 4 -cdrom Rocky-9.7-x86_64-minimal.iso -drive file=practice.qcow2,format=qcow2 -boot d
+    sudo qemu-system-x86_64 \
+        -enable-kvm \
+        -machine q35 \
+        -cpu host \
+        -m 4096 \
+        -smp 4 \
+        -cdrom Rocky-9.7-x86_64-minimal.iso \
+        -drive file=practice.qcow2,format=qcow2 \
+        -boot d
 
 ## Install TigerVNC 
 
