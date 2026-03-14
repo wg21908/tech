@@ -1,4 +1,4 @@
-# Learning Journey 02 — Development & Practice notes
+# Learning Journey 03 — Official Linux Kernel Ticket Walkthrough
 
 This directory contains a walkthrough of an official ticket I work for
 improving the Linux kernel. A file (`THE_REAL_DEAL.md`) describing an 
