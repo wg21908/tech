@@ -58,6 +58,13 @@ Open a new terminal, then run the following command, inside the VM run through t
     ps aux | grep qemu | grep practice
     kill -9 <PID Identified above>
 
+## Rebuild the initramfs with virtio drivers
+
+    sudo dracut -f \
+        --add-drivers "virtio_pci virtio_blk virtio_scsi virtio_ring virtio" \
+        /boot/initramfs-7.0.0-rc1-practice-run-01+.img \
+        7.0.0-rc1-practice-run-01+
+
 ## Connect to VM with Installed OS
 
     sudo qemu-system-x86_64 \
@@ -67,7 +74,10 @@ Open a new terminal, then run the following command, inside the VM run through t
         -smp 2 \
         -kernel /boot/vmlinuz-7.0.0-rc1-practice-run-01+ -initrd /boot/initramfs-7.0.0-rc1-practice-run-01+.img \
         -append "root=/dev/rlm/root console=ttyS0 nokaslr earlyprintk=serial rd.shell panic=1" \
-        -drive file=practice.qcow2,format=qcow2 \
+        -drive file=practice.qcow2,if=virtio,format=qcow2 \
         -nographic
+
+
+
 
     
