@@ -31,7 +31,8 @@ Redo step 1 to ensure all software is now present
 
 ### Retrieve Linux Kernel Source and Prepare for Build
 
-    cd $HOME/git && mkdir -p kernels; cd kernels
+    cd $HOME/git
+    mkdir -p kernels && cd kernels
     git clone -b staging-testing git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
     cd staging
 
@@ -105,7 +106,7 @@ The content that follows comes from the second resource defined in Resources sec
 
 ### Setup email
 
-1. FYI: git send-email, mutt, and esmtp were installed earlier
+1. FYI: git send-email, mutt, and msmtp were installed earlier
 2. In your Google account: Turn on 2-Step Verification, Create an app password, and Save that 16-character app password for the configs below.  FYI: While signed in to wg21908@gmail.com Gmail account, go to other browser tab and search "Google App Passwords" to get to page to manage this part.  Appears to be at https://myaccount.google.com/apppasswords, I was able to name my new App Password a name that reflected machine that was making use of it.
 3. Copy https://github.com/wg21908/kernel-newbie/blob/main/configs/.msmtprc to $HOME/, then make appropriate modifications
 4. chmod 600 ~/.msmtprc
