@@ -52,6 +52,14 @@ Open a new terminal, then run the following command, inside the VM run through t
 
 ## Connect to VM with Installed OS
 
-    sudo qemu-system-x86_64 -enable-kvm -cpu host -m 2048 -smp 2 -kernel /boot/vmlinuz-7.0.0-rc1-practice-run-01+ -initrd /boot/initramfs-7.0.0-rc1-practice-run-01+.img -append "root=/dev/rlm/root console=ttyS0 nokaslr earlyprintk=serial rd.shell panic=1" -drive file=practice.qcow2,format=qcow2 -nographic
+    sudo qemu-system-x86_64 \
+        -enable-kvm \
+        -cpu host \
+        -m 2048 \
+        -smp 2 \
+        -kernel /boot/vmlinuz-7.0.0-rc1-practice-run-01+ -initrd /boot/initramfs-7.0.0-rc1-practice-run-01+.img \
+        -append "root=/dev/rlm/root console=ttyS0 nokaslr earlyprintk=serial rd.shell panic=1" \
+        -drive file=practice.qcow2,format=qcow2 \
+        -nographic
 
     
