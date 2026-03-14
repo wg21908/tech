@@ -53,7 +53,7 @@ Open a new terminal, then run the following command, inside the VM run through t
 
     vncviewer localhost:5900
 
-## Close Window and Cleanup Processw
+## Close Window and Cleanup Processes if Needed
 
     ps aux | grep qemu | grep practice
     kill -9 <PID Identified above>
