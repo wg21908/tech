@@ -76,3 +76,10 @@ Open a new terminal, then run the following command, inside the VM run through t
         -append "root=/dev/rlm/root console=ttyS0 nokaslr earlyprintk=serial rd.shell panic=1" \
         -drive file=practice.qcow2,if=virtio,format=qcow2 \
         -nographic
+
+## Questions / Support
+
+Technical support is available when coffee is being supplied.
+
+If you’d like to move forward, please [buy me a coffee](https://buymeacoffee.com/wg21908) and send me an email!
+
