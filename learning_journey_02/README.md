@@ -20,7 +20,7 @@ Files
     Google App Password), testing send-email, and a typical workflow for
     preparing and emailing patches.
 
-- [QEMU_VM_BASED_DEV_ENVIRONMENT.md](QEMU_VM_BASED_DEV_ENVIRONMENT.md) (coming soon):
+- QEMU_VM_BASED_DEV_ENVIRONMENT.md (coming soon):
   - Intention: an upcoming file where I'll describe the steps to setup a Virtual Machine (VM)
     based Linux kernel develop environment.  This development environment will be based
     on the popular Linux QEMU technology.
