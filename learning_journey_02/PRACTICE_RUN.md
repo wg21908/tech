@@ -1,7 +1,5 @@
 # Practice Run
 
-## About
-
 For this practice run, I will make a small change to a C language file, build the kernel, then run my host system with a new version of the Linux kernel to see the change in action.
 
 ## Assumption(s)
