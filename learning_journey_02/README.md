@@ -44,9 +44,9 @@ How to use these notes
   to prepare your Linux native kernel development environment and verify email/git tooling.
 - Step 2: Follow the steps in [QEMU Virtual Machine (VM) Based Testing](QEMU_VM_BASED_TESTING.md)
   to prepare your QEMU/VM kernel development environment.
-- Step 3: Use [Practice Run 1](PRACTICE_RUN_1.md) to make a
+- Step 3: Use [Practice Run #1](PRACTICE_RUN_1.md) to make a
   small, reversible change and exercise the build/send/test loop.
-- Step 4: Use [Practice Run 2](PRACTICE_RUN_2.md) to understand process of using GDB against
+- Step 4: Use [Practice Run #2](PRACTICE_RUN_2.md) to understand process of using GDB against
   kernel in native Linux environment and kernel in QEMU VM.
   
 ## Questions / Support
