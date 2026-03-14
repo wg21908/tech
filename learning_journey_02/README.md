@@ -25,7 +25,7 @@ Files
     based Linux kernel develop environment.  This development environment will be based
     on the popular Linux QEMU technology.
     
-- [PRACTICE_RUN](PRACTICE_RUN_001.md):
+- [PRACTICE_RUN_1](PRACTICE_RUN_001.md):
   - Purpose: a concise checklist for a practice change and verification loop.
   - Key contents: git basics (branching, fetching, rebasing), how to
     configure the kernel for a ticket (copying /boot config, setting
@@ -34,6 +34,10 @@ Files
     how to verify with `dmesg`, and how to revert the practice change
     (`git reset --hard HEAD`).
 
+- PRACTICE_RUN_2 (coming soon):
+  - Purpose: GDB Debugging in Linux native environment and against QEMU VM.
+  - Key contents: 
+    
 - THE_REAL_DEAL (coming soon):
   - Intention: an upcoming file where I'll describe an official ticket
     (C and/or Assembly changes) you work on for the Linux kernel, including
