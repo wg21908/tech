@@ -38,11 +38,6 @@ Files
   - Purpose: GDB Debugging in Linux native environment and against QEMU VM.
   - Key contents: 
     
-- THE_REAL_DEAL (coming soon):
-  - Intention: an upcoming file where I'll describe an official ticket
-    (C and/or Assembly changes) you work on for the Linux kernel, including
-    the problem, design notes, and patch workflow.
-
 How to use these notes
 -
 - Step 1: Follow the steps in [LINUX_NATIVE_BASED_DEV_ENV.md](LINUX_NATIVE_BASED_DEV_ENV.md)
