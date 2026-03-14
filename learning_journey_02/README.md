@@ -45,14 +45,14 @@ Files
 
 How to use these notes
 -
-- Step 1.0: Follow the steps in [LINUX_NATIVE_BASED_DEV_ENV.md](LINUX_NATIVE_BASED_DEV_ENV.md)
+- Step 1: Follow the steps in [LINUX_NATIVE_BASED_DEV_ENV.md](LINUX_NATIVE_BASED_DEV_ENV.md)
   to prepare your Linux native kernel development environment and verify email/git tooling.
-- Step 1.1: Follow the steps in [QEMU_VM_BASED_DEV_ENVIRONMENT.md](QEMU_VM_BASED_DEV_ENVIRONMENT.md)
+- Step 2: Follow the steps in [QEMU_VM_BASED_TESTING.md](QEMU_VM_BASED_TESTING.md)
   to prepare your QEMU/VM kernel development environment.
-- Step 2: Use [PRACTICE_RUN.md](PRACTICE_RUN.md) to make a
+- Step 2: Use [Practice Run 1](PRACTICE_RUN_1.md) to make a
   small, reversible change and exercise the build/send/test loop.
-- Step 3: When `THE_REAL_DEAL.md` is added, use it as the reference for the
-  official ticket workflow and to track the work you submit upstream.
+- Step 3: Use [Practice Run 2](PRACTICE_RUN_2.md) to understand process of using GDB against
+  kernel in native Linux environment and kernel in QEMU VM.
   
 ## Questions / Support
 
