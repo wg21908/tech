@@ -2,7 +2,7 @@
 
 ## Assumption(s)
 
-- You've run through everything in the [Developer Setup README](learning_journey_02/README.md)
+- You've run through everything in the [LINUX_NATIVE_BASED_DEV_ENV README](learning_journey_02/LINIX_NATIVE_BASED_DEV_ENV.md)
 - You still have the local copy of git clone -b staging-testing git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git cloned to your machine
 
 ## Steps
