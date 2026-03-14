@@ -2,7 +2,7 @@
 
 ## About this page
 
-
+Update me!
 
 ## Resources
 
@@ -21,80 +21,37 @@ I'm working on Rocky Linux 9.  It appears that everything is already installed a
     sudo dnf -y install virt-manager                                             # This installs the Qemu KVM User Interface.
     qemu-system-x86_64 --version                                                 # This tells you the installed version of QEMU
     lsmod | grep kvm                                                             # Check virtualization acceleration 
+    egrep -c '(vmx|svm)' /proc/cpuinfo                                           # CPU supports virtualization, above 0, your good
 
-## Create QEMU VM and Connect with TigerVNC
+## Create Disk
 
-1. Downloading Rocky Linux 9 Minimal ISO from https://rockylinux.org/download
-2. `cd ~/Downloads`
-3. Start a headless VM with `qemu-system-x86_64 -machine q35 -m 4096 -smp 4 -cdrom Rocky-9.7-x86_64-minimal.iso -boot d`
-4. Install TigerVNC with `dnf -y install tigervnc`
-5. Connect to headless VM with TigerVNC with `vncviewer localhost:5900` 
+    qemu-img create -f qcow2 practice.qcow2 40G
 
-## Networking for VM
+## Verify the Disk
 
-Default NAT networking
+    qemu-img info practice.qcow2
 
-- qemu-system-x86_64 -enable-kvm -m 2048 -hda rockyvm.qcow2 -net nic -net user
+## Create VM Ready for Connection   
 
-## Port Forwarding
+    qemu-system-x86_64 -enable-kvm -machine q35 -cpu host -m 4096 -smp 4 -cdrom Rocky-9.7-x86_64-minimal.iso -drive file=practice.qcow2,format=qcow2 -boot d
 
-Example: SSH into VM
+## Install TigerVNC 
 
-- qemu-system-x86_64 -enable-kvm -m 2048 -hda rockyvm.qcow2 -net nic -net user,hostfwd=tcp::2222-:22
-- SSH from host with `ssh localhost -p 2222`
+    dnf -y install tigervnc   
 
-## Snapshots
+## Connect and Install Rocky Linux onto Disk
 
-Changes disappear when VM shuts down.  Perfect for dangerous testing.
+Open a new terminal, then run the following command, inside the VM run through the steps to install the OS
 
-- Start VM in snapshot mode with `qemu-system-x86_64 -enable-kvm -m 2048 -hda rockyvm.qcow2 -snapshot`
+    vncviewer localhost:5900
 
-## Run Headless
+## Close Window and Cleanup Processw
 
-Output goes to terminal
+    ps aux | grep qemu | grep practice
+    kill -9 <PID Identified above>
 
-- `qemu-system-x86_64 -enable-kvm -m 2048 -hda rockyvm.qcow2 -nographic`
+## Connect to VM with Installed OS
 
-## Emulate Other CPU Architectures
+    sudo qemu-system-x86_64 -enable-kvm -cpu host -m 2048 -smp 2 -kernel /boot/vmlinuz-7.0.0-rc1-practice-run-01+ -initrd /boot/initramfs-7.0.0-rc1-practice-run-01+.img -append "root=/dev/rlm/root console=ttyS0 nokaslr earlyprintk=serial rd.shell panic=1" -drive file=practice.qcow2,format=qcow2 -nographic
 
-- ARM with `qemu-system-aarch64`
-- Raspberry PI with `qemu-system-arm`
-- RISC-V with `qemu-system-riscv64`
-
-## Kernel Debugging
-
-- Start kernel with gdb debugging: with `qemu-system-x86_64 -s -S -kernel bzImage`
-- Then run `gdb vmlinux`
-- Connect with `target remote :1234`
-
-
-
-
-
-Create and manage VM disks
-Boot custom kernels
-Networking for VMs
-Snapshots
-Headless automation
-Emulating other CPU architectures
-
-
-    
-
-
-## GUI Alternative
-
-Blah, blah, blah
-
-    Run the Virtual Manager application with `virt-manager`
-    Choose "Local install media (ISO image or CDROM)
-    Choose Forward
-    Click the Browse button 
-    Click the 'Browse Local' button to downloaded ISO in ~/Downloads directory
-    Open
-    Forward
-    Accept default Memory and CPUs then select Forward
-    Accept default 'Enable storage for this virtual machine', 20.0 for 'Create a dsik image for the virtual machine', and leave 'Select or create custom image' unselected, then select Forward
-    Either accept default Name or type in another name for your new VM, then select Forward
-    Run through OS installation in the QEMU/KVM window to create the VM
     
