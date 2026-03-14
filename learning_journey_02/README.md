@@ -25,7 +25,7 @@ Files
     based Linux kernel develop environment.  This development environment will be based
     on the popular Linux QEMU technology.
     
-- [PRACTICE_RUN_1](PRACTICE_RUN_001.md):
+- [PRACTICE_RUN_1](PRACTICE_RUN_1.md):
   - Purpose: a concise checklist for a practice change and verification loop.
   - Key contents: git basics (branching, fetching, rebasing), how to
     configure the kernel for a ticket (copying /boot config, setting
