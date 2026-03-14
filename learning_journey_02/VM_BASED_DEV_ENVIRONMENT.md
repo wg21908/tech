@@ -1,4 +1,4 @@
-# Virtual Machine (VM) Based Develooment Environment
+# Virtual Machine (VM) Based Development Environment
 
 ## Resources
 
